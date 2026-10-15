@@ -21,7 +21,14 @@ jobs:
           name=d['file']
           assert pathlib.Path(name).name==name and name.endswith('.apk')
           assert d['url'].startswith('https://')
-          urllib.request.urlretrieve(d['url'],name)
+          if 'parts_ref' in d:
+              import subprocess
+              subprocess.run(['git','fetch','origin',d['parts_ref']],check=True)
+              with open(name,'wb') as out:
+                  for part in d['parts']:
+                      out.write(subprocess.run(['git','show','FETCH_HEAD:'+part],check=True,capture_output=True).stdout)
+          else:
+              urllib.request.urlretrieve(d['url'],name)
           assert hashlib.sha256(pathlib.Path(name).read_bytes()).hexdigest()==d['sha256'],'APK checksum mismatch'
           pathlib.Path('release-notes.txt').write_text(d['notes']+'\n\nSHA-256: `'+d['sha256']+'`\n')
           pathlib.Path('SHA256SUMS.txt').write_text(d['sha256']+'  '+name+'\n')

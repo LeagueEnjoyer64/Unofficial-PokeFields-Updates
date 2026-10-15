@@ -1,0 +1,14 @@
+{
+  "tag": "v1.0.10",
+  "file": "Unofficial-PokeFields-v1.0.10.apk",
+  "url": "https://github.com/LeagueEnjoyer64/Unofficial-PokeFields-Updates/tree/apk-staging-v1.0.10/parts",
+  "parts_ref": "apk-staging-v1.0.10",
+  "parts": [
+    "parts/apk.part.00",
+    "parts/apk.part.01",
+    "parts/apk.part.02",
+    "parts/apk.part.03"
+  ],
+  "sha256": "76582ffa3c73b9e302a82e16738bacb58f656e6dae0787b591627eb79b4f62e2",
+  "notes": "Fixes Pokedex data, Game Corner coin case and prizes, planting seeds at home, and achievements/titles. Install over the existing unofficial app to keep imported ROMs and settings. No ROMs included."
+}
