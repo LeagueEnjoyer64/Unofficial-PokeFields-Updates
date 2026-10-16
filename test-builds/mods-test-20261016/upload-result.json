@@ -1,0 +1,17 @@
+{
+  "release_id": 415339206,
+  "url": "https://github.com/LeagueEnjoyer64/Unofficial-PokeFields-Updates/releases/tag/untagged-dbb99cf32b5617a86163",
+  "draft": true,
+  "prerelease": true,
+  "tag": "mods-test-20261016-1",
+  "asset": {
+    "id": 648477464,
+    "name": "PokeFields-Mods-Test.apk",
+    "url": "https://github.com/LeagueEnjoyer64/Unofficial-PokeFields-Updates/releases/download/untagged-dbb99cf32b5617a86163/PokeFields-Mods-Test.apk",
+    "bytes": 1247619184,
+    "state": "uploaded",
+    "digest": "sha256:ed07abbaa6cedaf245d08c66d0b8770b4fa4091526cb396d47bfbeba79273b88",
+    "expected_sha256": "ed07abbaa6cedaf245d08c66d0b8770b4fa4091526cb396d47bfbeba79273b88"
+  },
+  "checksum_url": "https://github.com/LeagueEnjoyer64/Unofficial-PokeFields-Updates/releases/download/untagged-dbb99cf32b5617a86163/SHA256SUMS.txt"
+}
