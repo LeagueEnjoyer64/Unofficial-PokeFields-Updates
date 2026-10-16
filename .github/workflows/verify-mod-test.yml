@@ -1,0 +1,48 @@
+name: Verify isolated mod test draft
+on:
+  push:
+    branches: [test/mods-upscaled-light-20261016]
+    paths: ['.github/workflows/verify-mod-test.yml']
+permissions:
+  contents: write
+jobs:
+  verify-draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify uploaded draft assets and save the download receipt
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,urllib.error,base64
+          repo=os.environ['GITHUB_REPOSITORY']
+          root='https://api.github.com/repos/'+repo
+          headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}
+          def api(path,method='GET',data=None):
+              raw=json.dumps(data).encode() if data is not None else None
+              request=urllib.request.Request(root+path,data=raw,method=method,headers=headers)
+              with urllib.request.urlopen(request) as response:return json.load(response)
+          # Draft releases are listed for a writer; /releases/tags does not resolve unpublished draft tags.
+          releases=api('/releases?per_page=100')
+          release=next(r for r in releases if r['tag_name']=='mods-test-20261016-1')
+          assert release['draft'] is True and release['prerelease'] is True
+          assets=api('/releases/'+str(release['id'])+'/assets?per_page=100')
+          apk=next(a for a in assets if a['name']=='PokeFields-Mods-Test.apk')
+          checksum=next(a for a in assets if a['name']=='SHA256SUMS.txt')
+          assert apk['size']==1247619184 and apk['state']=='uploaded'
+          expected='ed07abbaa6cedaf245d08c66d0b8770b4fa4091526cb396d47bfbeba79273b88'
+          if apk.get('digest'):assert apk['digest']=='sha256:'+expected
+          receipt={'release_id':release['id'],'url':release['html_url'],'draft':release['draft'],'prerelease':release['prerelease'],'tag':release['tag_name'],'asset':{'id':apk['id'],'name':apk['name'],'url':apk['browser_download_url'],'bytes':apk['size'],'state':apk['state'],'digest':apk.get('digest'),'expected_sha256':expected},'checksum_url':checksum['browser_download_url']}
+          path='/contents/test-builds/mods-test-20261016/upload-result.json'
+          branch='test/mods-upscaled-light-20261016'
+          body={'message':'Record verified unpublished mod-test APK upload','branch':branch,'content':base64.b64encode((json.dumps(receipt,indent=2)+'\n').encode()).decode()}
+          try:
+              existing=api(path+'?ref='+urllib.parse.quote(branch,safe=''))
+              body['sha']=existing['sha']
+          except urllib.error.HTTPError as error:
+              if error.code!=404:raise
+          api(path,'PUT',body)
+          print('Verified draft APK:',release['html_url'])
+          print('Asset bytes:',apk['size'],'SHA256:',expected)
+          PY
