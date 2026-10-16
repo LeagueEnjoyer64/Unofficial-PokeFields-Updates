@@ -1,0 +1,63 @@
+name: Store isolated mod test as draft
+on:
+  push:
+    branches: [test/mods-upscaled-light-20261016]
+    paths: ['test-builds/**', '.github/workflows/upload-mod-test.yml']
+permissions:
+  contents: write
+concurrency:
+  group: isolated-mod-test-draft
+  cancel-in-progress: false
+jobs:
+  upload-draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reassemble and verify the signed test APK
+        run: |
+          python3 - <<'PY'
+          import pathlib,json,hashlib
+          folder=pathlib.Path('test-builds/mods-test-20261016')
+          manifest=json.loads((folder/'manifest.json').read_text())
+          assert manifest['package']=='app.unofficial.pokefields.modtest'
+          with open(manifest['file'],'wb') as output:
+              for part in manifest['parts']:
+                  data=(folder/part['file']).read_bytes()
+                  assert len(data)==part['bytes']
+                  assert hashlib.sha256(data).hexdigest()==part['sha256']
+                  output.write(data)
+          apk=pathlib.Path(manifest['file'])
+          assert apk.stat().st_size==manifest['bytes']
+          assert hashlib.file_digest(apk.open('rb'),'sha256').hexdigest()==manifest['sha256']
+          pathlib.Path('SHA256SUMS.txt').write_text(manifest['sha256']+'  '+manifest['file']+'\n')
+          pathlib.Path('draft-notes.md').write_text('Phone mod test only. Separate app: app.unofficial.pokefields.modtest. Upscaled Light included and enabled. Production updates disabled. Import ROMs and sign in again. No normal-app or production update-channel changes. Physical phone and live battles untested.\n\nSHA256: '+manifest['sha256']+'\n')
+          PY
+      - name: Upload only to an unpublished draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG=mods-test-20261016-1
+          if ! gh release view "$TAG" --json isDraft --jq '.isDraft' > draft-state.txt 2>/dev/null; then
+            gh release create "$TAG" --draft --prerelease --latest=false --target "$GITHUB_SHA" --title "PokeFields Mods Test - phone APK (DRAFT ONLY)" --notes-file draft-notes.md
+          else
+            test "$(cat draft-state.txt)" = true || { echo 'Refusing to modify a published release'; exit 1; }
+          fi
+          gh release upload "$TAG" PokeFields-Mods-Test.apk SHA256SUMS.txt --clobber
+          gh api "repos/${GITHUB_REPOSITORY}/releases/tags/$TAG" > draft-receipt.json
+          python3 - <<'PY'
+          import json,pathlib
+          data=json.loads(pathlib.Path('draft-receipt.json').read_text())
+          assert data['draft'] is True and data['prerelease'] is True
+          asset=next(a for a in data['assets'] if a['name']=='PokeFields-Mods-Test.apk')
+          assert asset['size']==1247619184
+          pathlib.Path('test-builds/mods-test-20261016/upload-result.json').write_text(json.dumps(data,indent=2)+'\n')
+          print('Verified draft release:',data['html_url'])
+          PY
+      - name: Record receipt on this test branch only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add test-builds/mods-test-20261016/upload-result.json
+          git commit -m 'Record verified unpublished mod-test APK upload' || true
+          git push origin HEAD:refs/heads/test/mods-upscaled-light-20261016

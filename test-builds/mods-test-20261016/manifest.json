@@ -1,0 +1,150 @@
+{
+  "file": "PokeFields-Mods-Test.apk",
+  "bytes": 1247619184,
+  "sha256": "ed07abbaa6cedaf245d08c66d0b8770b4fa4091526cb396d47bfbeba79273b88",
+  "tag": "mods-test-20261016-1",
+  "branch": "test/mods-upscaled-light-20261016",
+  "package": "app.unofficial.pokefields.modtest",
+  "parts": [
+    {
+      "file": "PokeFields-Mods-Test.apk.part000",
+      "bytes": 45000000,
+      "sha256": "05d13adea5cea840b026af43d25340ce6b47374291fb22643f4c8b19744cef30"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part001",
+      "bytes": 45000000,
+      "sha256": "401bbc7a4d8fb000baee7e336c96ca496bd4579ffd5c7b7ae5b59b2c22be263e"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part002",
+      "bytes": 45000000,
+      "sha256": "f3b47c0d43496d419505554e7e826c17d256bc8d2b3a92b8b09d0c284c368ded"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part003",
+      "bytes": 45000000,
+      "sha256": "136073e201c5d04b47ada4037e94a3545e58fc8a0bde255d04f4aebc8235438c"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part004",
+      "bytes": 45000000,
+      "sha256": "f7e95c7b97676a2f5c5aa14add92f7676acdb91c03c0511f4b5182eb11d675c2"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part005",
+      "bytes": 45000000,
+      "sha256": "e53a4469fb3e539b7ed16a6cfb31c7270fe387d9abf886785bec0da91a71ce1d"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part006",
+      "bytes": 45000000,
+      "sha256": "7ac5bf2d590a919a39b22aa9690db1866f8ba3137a80e2f4e8cd8a4e6fe466cf"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part007",
+      "bytes": 45000000,
+      "sha256": "9d1c6b38b25f8e76f2a03ae9dd81c9c23dcff25e86bc3e995c935b856c4243cf"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part008",
+      "bytes": 45000000,
+      "sha256": "4728aa489dc2e2f22134dfe902757565b184fb9e4f5fec225b7001ec8a67af15"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part009",
+      "bytes": 45000000,
+      "sha256": "c2683bb2b3bdf169d03c991dba451ad11783cdc1492831af2dcc7192157e4a1b"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part010",
+      "bytes": 45000000,
+      "sha256": "d77e7e837955b8915aa5dbeeb45386e80f7ac52792a485143520d8280c1b5c16"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part011",
+      "bytes": 45000000,
+      "sha256": "d4144ff1f529b6ddbfb689ebc38b7a03ae5a3f6b3d2486eac88a8cc188bc968f"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part012",
+      "bytes": 45000000,
+      "sha256": "ba11eaa3a2798daf69f7c4283989c03e09f7ce69ffd2158c8181df9b4bbdaf22"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part013",
+      "bytes": 45000000,
+      "sha256": "c753f9c3e5e2e9ef3206d50dda3bd2c976b4610ee4f4f7fbbd5f2b3fdb23ff25"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part014",
+      "bytes": 45000000,
+      "sha256": "305d59e660c5352ddfb312617bd96ce63676719aaf8df06510c71bdf28614271"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part015",
+      "bytes": 45000000,
+      "sha256": "6518d8f858c5c0fea1eee871088470eb8096fdec73ae049076e48c4fdbe016f4"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part016",
+      "bytes": 45000000,
+      "sha256": "24cfa7fe33014ec90cce7f595888eebd5f547500a6f137a02c4069e34dd0cc36"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part017",
+      "bytes": 45000000,
+      "sha256": "5e755b71742cf4d3717ca18d68bd47d1163e4c1c490e6be79131c9a6bcb56fb9"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part018",
+      "bytes": 45000000,
+      "sha256": "b6265210e9650a4f8744555475d1d90808f3fa79d48f3efd282d0d1690ec0e0b"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part019",
+      "bytes": 45000000,
+      "sha256": "fe29796e6f6b9ed7864ff584d65a5494b69c80091b878ebe57907ba6e5a8d5e9"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part020",
+      "bytes": 45000000,
+      "sha256": "b75f61eadf740f1a575bfd7077221166da1866d79041360aad731177e7967d45"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part021",
+      "bytes": 45000000,
+      "sha256": "87ead4ae89c1c9c596587e2676204fc5855f090488f4af7901a7c03a93df5858"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part022",
+      "bytes": 45000000,
+      "sha256": "4a7b10517dec0dfb7b1ad01a5d01b686ffa77b43414166e409b488b363e1e4a7"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part023",
+      "bytes": 45000000,
+      "sha256": "08cc622a214fb8e897e82f5daa0173549afb286d89a87f0db05f047554f35b06"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part024",
+      "bytes": 45000000,
+      "sha256": "c48cb9f66cf1807f83b314e364c15275a9eb241471d978701913b6eb2ac50cff"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part025",
+      "bytes": 45000000,
+      "sha256": "4f88e6c28dad2d82758a92268a8340fedbaa8258d9ef09ef89aa7709c63f942d"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part026",
+      "bytes": 45000000,
+      "sha256": "2ac8c6f1af4a3be90ee8c1c2f4f780718505749bd29d9c6887390ae905833c12"
+    },
+    {
+      "file": "PokeFields-Mods-Test.apk.part027",
+      "bytes": 32619184,
+      "sha256": "7e4dbb0272e71c6305bcf1c38dc7c450b7a2b2a67d2ee4230316d4b0ca13d37b"
+    }
+  ]
+}
