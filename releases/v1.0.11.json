@@ -1,0 +1,14 @@
+{
+  "tag": "v1.0.11",
+  "file": "Unofficial-PokeFields-v1.0.11.apk",
+  "url": "https://github.com/LeagueEnjoyer64/Unofficial-PokeFields-Updates/tree/apk-staging-v1.0.11/parts",
+  "parts_ref": "apk-staging-v1.0.11",
+  "parts": [
+    "parts/apk.part.00",
+    "parts/apk.part.01",
+    "parts/apk.part.02",
+    "parts/apk.part.03"
+  ],
+  "sha256": "25ee72fc0337fb694cd5e9c852a418a4bd1f7e7b6561052076575cffdd9ae55a",
+  "notes": "Fixes signed coin losses, wallet refreshes, gym rematch markers, and Cinnabar/Fuchsia gym tiles. Adds a bounded 90-second Android background session service with a notification to keep existing heartbeat threads running while switching apps. Includes previous fixes. Android phone testing is pending. Install over the existing app to retain imported ROMs and settings. No ROMs included."
+}
