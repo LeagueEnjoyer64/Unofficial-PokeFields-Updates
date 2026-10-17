@@ -1,0 +1,37 @@
+{
+  "file": "PokeFields-Mods-Test-HD.apk",
+  "bytes": 2141112454,
+  "sha256": "51c7e3d5c4814a5a5c4e222aa981d36c356e86c29439826a64d8aa1c31c889b3",
+  "parts": [
+    {
+      "file": "part000",
+      "sha256": "d6c6169039d0109ef2728549b982c2ae29758539dbb8863bbe21b6008f3816f8"
+    },
+    {
+      "file": "part001",
+      "sha256": "6cfcc7f23d9b381945b53233b5a03959918b8254cc2e0211e4aa696147918b6a"
+    },
+    {
+      "file": "part002",
+      "sha256": "b89aafea4923ae4154dbea78b5532062a9016f0948411e961adfe7a796f81b9b"
+    },
+    {
+      "file": "part003",
+      "sha256": "c266afbc45a818629bd6cb8eb97f6df3d32e7f83ffa15fb6f690d0f0daa0e6d0"
+    },
+    {
+      "file": "part004",
+      "sha256": "154e7ba513966452f2ef90f394dd76e3d2e8a96816bc698b32e529880db44e78"
+    },
+    {
+      "remote": true,
+      "bytes": 1924622939,
+      "sha256": "3c5c1401ee1737c650b3f1aa843e047de0fb06f82d5cbaf79875b97d6f31a5df"
+    },
+    {
+      "file": "part006",
+      "sha256": "33205e1c431c73786ec46fb2f76644078cb2ec82986f79f2cef8b893e63bb085"
+    }
+  ],
+  "tag": "mods-test-20261017-hd4-final"
+}

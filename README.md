@@ -1,0 +1,1 @@
+PokeFields HD Mods Test. Full HD Battle Sprites v0.9.10 by Verdep and Insensitivity is bundled and enabled automatically. Separate app app.unofficial.pokefields.modtest. No mod import needed. Production updater disabled. Android emulator decoder and bundle checks passed; physical phone and live battles remain untested. Draft only.
