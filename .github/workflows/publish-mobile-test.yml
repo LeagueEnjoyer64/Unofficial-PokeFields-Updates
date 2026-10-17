@@ -1,0 +1,39 @@
+name: Publish manual mobile UI test
+on:
+  push:
+    branches: [mobile-ui-test-1]
+    paths: ['test-build.json', '.github/workflows/publish-mobile-test.yml']
+permissions:
+  contents: write
+jobs:
+  test-prerelease:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble and verify test APK
+        run: |
+          python3 - <<'PY'
+          import json,pathlib,hashlib
+          d=json.loads(pathlib.Path('test-build.json').read_text())
+          assert d['tag']=='mobile-ui-test-1'
+          assert pathlib.Path(d['file']).name==d['file']
+          with open(d['file'],'wb') as out:
+              for name in d['parts']:
+                  assert name.startswith('parts/') and '..' not in name
+                  out.write(pathlib.Path(name).read_bytes())
+          p=pathlib.Path(d['file'])
+          assert p.stat().st_size==d['bytes']
+          assert hashlib.sha256(p.read_bytes()).hexdigest()==d['sha256']
+          pathlib.Path('SHA256SUMS.txt').write_text(d['sha256']+'  '+d['file']+'\n')
+          PY
+      - name: Publish test prerelease without changing latest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG=mobile-ui-test-1
+          FILE=PokeFields-Mobile-Private-Test.apk
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --draft --prerelease --latest=false --title "Mobile UI Test 1 — manual install only" --notes-file release-notes.md --target "$GITHUB_SHA"
+          fi
+          gh release upload "$TAG" "$FILE" SHA256SUMS.txt --clobber
+          gh release edit "$TAG" --draft=false --prerelease --latest=false
