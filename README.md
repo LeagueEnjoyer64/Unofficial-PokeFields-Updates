@@ -1,0 +1,1 @@
+PokeFields sprite import test v2. Separate app app.unofficial.pokefields.modtest. NO mods bundled. Import your own .mod or ZIP battle sprite pack through Mods. Production updater disabled. PNG and GIF animations tested on Android emulator; physical phone and live battles remain untested. Draft only, never publish or change production channels.
