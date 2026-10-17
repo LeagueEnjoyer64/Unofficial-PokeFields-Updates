@@ -1,0 +1,36 @@
+{
+  "file": "PokeFields-Mods-Test-v3.apk",
+  "bytes": 277280898,
+  "sha256": "9e43d17b85ea14a674affde6f129599c838a50977dd52f1323b1114ae92eef8f",
+  "parts": [
+    {
+      "file": "part000",
+      "sha256": "a5c30105299be40af27faf45bb42e5bed5d6554f779488d299ea1c27bb48c909"
+    },
+    {
+      "file": "part001",
+      "sha256": "8e15dc148bafd115d03c59b3f4f28a9233179293407cee70be49251013eebd20"
+    },
+    {
+      "file": "part002",
+      "sha256": "5e4cca2aa523364600cc902232ab7d0d7b1a522180714827856824e8a652daf1"
+    },
+    {
+      "file": "part003",
+      "sha256": "fc3422f59b91230ba8da2dccaa5434745e6df1022943f7d60bd17bfb3afd37cb"
+    },
+    {
+      "file": "part004",
+      "sha256": "aa04460a531c70138947c6dc0712404b64a257aefbec7d895762ba23157431dd"
+    },
+    {
+      "file": "part005",
+      "sha256": "6fb500aaeedb2a27f5c3fa89fe20fe3ad3a9691fed70248ce222eeae100c07bc"
+    },
+    {
+      "file": "part006",
+      "sha256": "16ba7246e81f545efa746c0863f0780cef7f7434638a02f78d627f06b448e2bb"
+    }
+  ],
+  "tag": "mods-test-20261017-3"
+}
