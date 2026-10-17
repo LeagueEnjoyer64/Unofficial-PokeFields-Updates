@@ -1,7 +1,7 @@
 name: Publish manual mobile UI test
 on:
   push:
-    branches: [mobile-ui-test-2]
+    branches: [mobile-ui-test-3]
     paths: ['test-build.json', '.github/workflows/publish-mobile-test.yml']
 permissions:
   contents: write
@@ -15,7 +15,7 @@ jobs:
           python3 - <<'PY'
           import json,pathlib,hashlib
           d=json.loads(pathlib.Path('test-build.json').read_text())
-          assert d['tag']=='mobile-ui-test-2'
+          assert d['tag']=='mobile-ui-test-3'
           assert pathlib.Path(d['file']).name==d['file']
           with open(d['file'],'wb') as out:
               for name in d['parts']:
@@ -30,10 +30,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          TAG=mobile-ui-test-2
+          TAG=mobile-ui-test-3
           FILE=PokeFields-Mobile-Private-Test.apk
           if ! gh release view "$TAG" >/dev/null 2>&1; then
-            gh release create "$TAG" --draft --prerelease --latest=false --title "Mobile UI Test 2 — manual install only" --notes-file release-notes.md --target "$GITHUB_SHA"
+            gh release create "$TAG" --draft --prerelease --latest=false --title "Mobile UI Test 3 — manual install only" --notes-file release-notes.md --target "$GITHUB_SHA"
           fi
           gh release upload "$TAG" "$FILE" SHA256SUMS.txt --clobber
           gh release edit "$TAG" --draft=false --prerelease --latest=false

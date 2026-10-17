@@ -2,7 +2,9 @@ Manual test build of the playable PokeFields Android client with the mobile UI c
 
 Installs separately as **PokeFields Mobile Test** (app.unofficial.pokefields.mobiletest). Import your ROMs and sign in again. No ROMs included. The standard app remains installed.
 
-**Test 2 (1.0.11-mobiletest.2)** updates the existing separate test app. Keeps imported ROMs and settings when installed over Test 1.
+**Test 3 (1.0.11-mobiletest.3)** updates the existing separate test app. Keeps imported ROMs and settings when installed over Test 1 or Test 2.
+
+Restores the original A, B and D-pad during NPC conversations. A finishes typing/advances, the D-pad selects dialogue choices, and B cancels cancellable choices. No separate Continue button added. World movement remains blocked during dialogue; battle and other menu touch handling is retained. Source and compiled physical-touch fixtures verify this path.
 
 Mail now fills the phone screen with a scrolling inbox and compose form. Friends has a usable scrolling list, search, sorting and tap-to-open player menus. Matchmaking replaces its desktop sidebar with a section picker and large Ranked/Casual controls; server eligibility rules remain unchanged. HMs are under TMs/HMs, and exploration items are under Other.
 
@@ -12,4 +14,4 @@ Source and actual compiled-pack checks passed with populated lists, queue eligib
 
 Automatic APK/resource updates are disabled inside this test app. The public stable release and signed update manifests are unchanged. Do not use this prerelease for a normal release rollout.
 
-SHA-256: `71cdd86ab469647373de6fdf90043f05ac2696701d957f03b7767aa6d3d2eae1`
+SHA-256: `781dac7d3ac7e14a7ee34d1d15a8ef307b58e2fca310950d4f7e00336c8e96b7`
