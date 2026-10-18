@@ -1,6 +1,8 @@
 Manual-install mobile UI test APK. This prerelease is not offered by the production automatic updater.
 
-**Test 5 (1.0.11-mobiletest.5)** installs over the separate **PokeFields Mobile Test** app and retains its imported ROMs and settings. Package: app.unofficial.pokefields.mobiletest. No ROMs included.
+**Test 6 (1.0.11-mobiletest.6)** installs over the separate **PokeFields Mobile Test** app and retains its imported ROMs and settings. Package: app.unofficial.pokefields.mobiletest. No ROMs included.
+
+**New control skin:** custom pixel-edged dark slate D-pad and octagonal A/B buttons, gold borders, cream pixel glyphs, muted red A and green B accents. Pressed directions/buttons highlight immediately. Existing touch hit regions, control sizing, opacity, saved positions, multitouch and independent B dragging are retained.
 
 - Native menus, confirmation/dialogue panels, battle window, custom mobile menus and HUD windows support touch dragging. Drag the title/header; panels without a header have a Move handle. Pointer capture continues outside the header. Layout refreshes no longer recenter moved menus.
 - Party is a vertical list with its existing reorder actions, minimize/restore and close controls.
@@ -13,4 +15,4 @@ Local source and actual compiled-pack checks cover touch/mouse header capture, p
 
 Automatic APK/resource updates are disabled in this test app. The production release, main branch and signed update manifests remain unchanged.
 
-SHA-256: `625a91ce8964fb883ad6e7e3644025cea76deb5aeac5491a7afe1e123a52d5cf`
+SHA-256: `25c557b55f1516b3f30eae7c8a50d539982c7d261a6e50d2a71af475c1aefdec`
