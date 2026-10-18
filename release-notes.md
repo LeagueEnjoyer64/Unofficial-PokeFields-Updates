@@ -1,23 +1,16 @@
-Manual test build of the playable PokeFields Android client with the mobile UI changes. This is a prerelease for manual installation and testing. It is not offered through the production automatic updater.
+Manual-install mobile UI test APK. This prerelease is not offered by the production automatic updater.
 
-Installs separately as **PokeFields Mobile Test** (app.unofficial.pokefields.mobiletest). Import your ROMs and sign in again. No ROMs included. The standard app remains installed.
+**Test 5 (1.0.11-mobiletest.5)** installs over the separate **PokeFields Mobile Test** app and retains its imported ROMs and settings. Package: app.unofficial.pokefields.mobiletest. No ROMs included.
 
-**Test 4 (1.0.11-mobiletest.4)** updates the existing separate test app. Keeps imported ROMs and settings when installed over Test 1 or Test 2.
+- Native menus, confirmation/dialogue panels, battle window, custom mobile menus and HUD windows support touch dragging. Drag the title/header; panels without a header have a Move handle. Pointer capture continues outside the header. Layout refreshes no longer recenter moved menus.
+- Party is a vertical list with its existing reorder actions, minimize/restore and close controls.
+- One movable Status card groups the real location, money, current game time and weather. Time uses the game clock; weather follows the original HUD's game data.
+- Compact chat has a drag handle and keeps its position during refresh. Jobs/Encounter visibility follows the world HUD, preserving their native visibility settings while avoiding dialogue-control interception.
 
-**New in Test 4:** Chat stays on screen and shrinks to a live feed above open menus instead of disappearing. The original nine-slot hotbar and three presets are back in a movable/collapsible window. Drag its header to reposition it; positions are saved.
+Retains Test 4's nine-slot movable hotbar, persistent chat, GTL/Map shortcuts, larger inventory scrolling controls and independent B positioning. Original dialogue A/B/D-pad and battle touch behavior are retained.
 
-The outer Party window sits alongside Jobs. Minimize/maximize it with minus/plus, drag its header to move it, and drag a Pokemon onto another to reorder the real party. The Party shortcut toggles this window; tapping a Pokemon opens the existing action menu. Jobs and Encounters retain their native minimize/X controls with larger touch targets and movable headers.
+Local source and actual compiled-pack checks cover touch/mouse header capture, position retention after layout refresh, vertical party and original reorder output, live status values, compact chat dragging, inventory controls, dialogue A/B/D-pad, battle entry and three landscape viewport sizes. Desktop rendering inspected. Phone gameplay testing is still required; no live account actions were performed.
 
-GTL and Map replace Battle and Social in the bottom navigation. Battle and Social remain under Menu > More. Both inventory views have larger, separated up/down scroll buttons and a wider scrollbar; the full inventory also has larger item slots. Hold B for a moment, then drag it to move it independently, like the emote icon. B position is saved. Normal B use and dialogue A/B/D-pad behavior are retained.
+Automatic APK/resource updates are disabled in this test app. The production release, main branch and signed update manifests remain unchanged.
 
-Local source and compiled-pack checks cover chat visibility, all nine hotbar slots, header movement/persistence, physical party drag/reorder output, collapsible party, inventory scroll controls, independent B drag, and earlier dialogue/battle/menu behavior. No connected Android phone was available; live gameplay retesting remains necessary.
-
-Mail now fills the phone screen with a scrolling inbox and compose form. Friends has a usable scrolling list, search, sorting and tap-to-open player menus. Matchmaking replaces its desktop sidebar with a section picker and large Ranked/Casual controls; server eligibility rules remain unchanged. HMs are under TMs/HMs, and exploration items are under Other.
-
-Battle entry now reveals the fight window immediately rather than leaving the map visible while waiting for its first event batch. Overworld touch controls stop intercepting battle taps. Battle layout and move controls fit landscape phone sizes. This addresses the local transition/input problems; the reported live phone battle still needs retesting.
-
-Source and actual compiled-pack checks passed with populated lists, queue eligibility, battle entry, move-button output and three landscape viewport sizes. Desktop renders inspected. No phone was connected through ADB; no live account action was performed. No ROMs included.
-
-Automatic APK/resource updates are disabled inside this test app. The public stable release and signed update manifests are unchanged. Do not use this prerelease for a normal release rollout.
-
-SHA-256: `de93efa09b8c28de4c15c068fa71684e33e35fb55bfb5120fa902d2bf4fb7d4d`
+SHA-256: `9658392fc98a7cf7a2d153e56dd76c941f9d2c768c31118e607e39701c305284`
