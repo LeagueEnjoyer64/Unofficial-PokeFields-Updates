@@ -12,6 +12,8 @@ Compatible resource fixes download automatically; after verification the app dis
 
 Version 1.0.11 adds a 90-second background session grace period while connected. Android may ask for notification permission so the temporary session notification can be shown. Returning to the app stops the service; the service also stops automatically after 90 seconds. Force-stopping the app or losing network connectivity can still end a session.
 
-The app checks for updates on launch and every two minutes; APK releases are also checked when returning to the app. Keep the app open while downloading a full APK. Choose Later to postpone an APK update. Small fixes and full APK releases use stable GitHub hosting.
+Version 1.0.12 checks for updates at the login gate before authentication, keeping restarts and installer prompts outside active gameplay. Keep the app open while downloading a full APK. Choose Later to postpone an APK update. Small fixes and full APK releases use stable GitHub hosting.
 
 Manifest signatures and download SHA-256 hashes are checked by the app. Updates are cumulative for their matching base version.
+
+Version 1.0.12 brings the mobile UI to the live app: adjustable touch controls, larger menus, native icons, a nine-slot hotbar, vertical party, chat resizing and locking, quest locking, emote improvements, wallet decoding correction, battle material color handling and Typhlosion Flamethrower alignment. Install this APK over the live app; the separate Mobile Test app retains its own data.
