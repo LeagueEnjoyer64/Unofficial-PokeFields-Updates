@@ -1,7 +1,7 @@
 {
-  "tag": "mobile-ui-test-6",
+  "tag": "mobile-ui-test-7",
   "file": "PokeFields-Mobile-Private-Test.apk",
-  "sha256": "25c557b55f1516b3f30eae7c8a50d539982c7d261a6e50d2a71af475c1aefdec",
+  "sha256": "c7338363b06b86b1365be5004774f4c05d1b48c1ba8c3c2d42ef9964bb07baeb",
   "bytes": 191876648,
   "parts": [
     "parts/apk.part.00",
