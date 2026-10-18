@@ -1,0 +1,13 @@
+{
+  "tag": "v1.0.12",
+  "file": "Unofficial-PokeFields-v1.0.12.apk",
+  "url": "https://github.com/LeagueEnjoyer64/Unofficial-PokeFields-Updates/tree/apk-staging-v1.0.12/parts",
+  "parts_ref": "apk-staging-v1.0.12",
+  "parts": [
+    "parts/apk.part.00",
+    "parts/apk.part.01",
+    "parts/apk.part.02"
+  ],
+  "sha256": "539458e299815f4ae063656921af20505b888131ff8c619be5fdd4f341c21754",
+  "notes": "Mobile UI is now available in the live Android app.\n\n- Larger mobile menus, original PokeFields icons, custom adjustable A/B and D-pad, and smoother control transitions.\n- Centered nine-slot hotbar, vertical party panel, native top-right status, and improved inventory controls.\n- Resizable chat with working close, lock and transparency; chat stays hidden over menus. Quest tracker lock and emote picker improvements.\n- Fixed malformed wallet balances caused by decoding map warp strings incorrectly.\n- Corrected battle material color handling, Typhlosion Flamethrower origin, and aligned Switch/Bag/Flee buttons.\n- Map Fly uses an eligible party Pokemon and existing server rules.\n\nInstall over the existing unofficial app to retain its ROM imports and settings. The separate Mobile Test app remains separate; its data is not automatically migrated. No ROMs are included.\n\nValidation: source and compiled mobile UI regressions, packaged startup, original signing certificate and package identity, retained Android services, and offline ROM battle/effect comparisons. Wallet decoding was also verified on a phone in Test 18. This final release has not been played through on a phone because ADB is currently disconnected."
+}
