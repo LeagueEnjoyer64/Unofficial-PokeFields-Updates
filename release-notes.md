@@ -13,4 +13,4 @@ Local source and actual compiled-pack checks cover touch/mouse header capture, p
 
 Automatic APK/resource updates are disabled in this test app. The production release, main branch and signed update manifests remain unchanged.
 
-SHA-256: `9658392fc98a7cf7a2d153e56dd76c941f9d2c768c31118e607e39701c305284`
+SHA-256: `625a91ce8964fb883ad6e7e3644025cea76deb5aeac5491a7afe1e123a52d5cf`
