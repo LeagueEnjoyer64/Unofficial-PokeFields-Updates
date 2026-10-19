@@ -17,3 +17,5 @@ Version 1.0.12 checks for updates at the login gate before authentication, keepi
 Manifest signatures and download SHA-256 hashes are checked by the app. Updates are cumulative for their matching base version.
 
 Version 1.0.12 brings the mobile UI to the live app: adjustable touch controls, larger menus, native icons, a nine-slot hotbar, vertical party, chat resizing and locking, quest locking, emote improvements, wallet decoding correction, battle material color handling and Typhlosion Flamethrower alignment. Install this APK over the live app; the separate Mobile Test app retains its own data.
+
+The current resource patch updates v1.0.12 to game revision 45 compatibility, including official data, battle matchups, profile decoding and level-cap status. New desktop catch-event management and skill-guide screens are not yet part of the mobile compatibility update. Return to login to check for the patch.
