@@ -1,0 +1,13 @@
+{
+  "tag": "v1.0.13",
+  "file": "Unofficial-PokeFields-v1.0.13.apk",
+  "url": "https://github.com/LeagueEnjoyer64/Unofficial-PokeFields-Updates/tree/apk-staging-v1.0.13/parts",
+  "parts_ref": "apk-staging-v1.0.13",
+  "parts": [
+    "parts/apk.part.00",
+    "parts/apk.part.01",
+    "parts/apk.part.02"
+  ],
+  "sha256": "d9a7f6f7a8b3c607d76410288f0ee7f0879ad7bf5eb61e47b8e5150407363aa0",
+  "notes": "# Android — 23/10/2026\n## v1.0.13 · Rev. 46 compatibility\n\n- Updated sign-in and world-entry decoding for Rev. 46.\n- Added the character selection and creation screens, character deletion confirmation, and return to character selection without logging out. Accounts support up to three characters.\n- Updated character IDs throughout player interactions, profiles, friends, parties and trading.\n- Updated game data and map overrides for Rev. 46, including the Safari Zone. Added Safari step and Smudge Stick harvest counters to the status HUD.\n- Updated the Pokédex with shiny and regional scopes, advanced filters, “Found here”, horde EV searches, type matchups, catch odds, drops and evolution badges.\n- Updated crafting recipe decoding for material savings, the new title bonuses and the removal of Tailoring.\n- Updated event-reward mail options for choosing nature, gender, IVs and moves.\n- Added the new settings, including No Battle Background, Mute When Unfocused and separate auto-decline options.\n- An already-open party HUD now stays visible during battle; a closed party HUD stays closed.\n- Retained the mobile A/B/D-pad, chat resizing and locks, saved HUD layouts, emotes, Map → Fly, trading controls, move relearning and evolution-stone fixes.\n\nThis release requires an APK update. Install over the existing **Unofficial PokeFields** app to retain its ROM imports and settings. No ROMs are included.\n\nValidation: native-client protocol comparisons; source and packaged regression suites; character selection/creation UI; Pokédex tabs and filters; crafting chance comparisons; and desktop OpenGL rendering checks. A physical Android play-through has **not** been completed for this release because the phone was unavailable.\n\nSafari entry rules, encounters, boss damage limits, catching rules and other balance changes are controlled by the official Rev. 46 server. The desktop staff catch-event management and skill-guide screens remain outside this Android port's existing scope.\n"
+}
