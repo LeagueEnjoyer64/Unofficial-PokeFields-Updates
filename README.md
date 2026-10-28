@@ -1,3 +1,9 @@
+# Development has ended
+
+The unofficial Android build has served its purpose. Thank you for playing. Use the [official PokeFields Android download](https://update.pokefields.com/download?platform=android) for future updates. [Final message from Tendo](FAREWELL.md).
+
+Existing v1.0.13 installations can receive the final message as a signed content patch; no new unofficial APK is required. Historical builds and manifests below are retained for reference.
+
 # Unofficial PokeFields Android updates
 
 [Download the latest APK](https://github.com/LeagueEnjoyer64/Unofficial-PokeFields-Updates/releases/latest)
